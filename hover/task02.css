@@ -1,0 +1,125 @@
+.background {
+			position: relative;
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+		}
+		.background::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: #ccc url(蛤.jpg) center no-repeat;
+			background-size: 350px 350px;
+			transition: all .5s;
+		}
+		.background:hover::before {
+			filter: blur(10px);
+		}
+		.content {
+			position: absolute;
+			width: 300px;
+			height: 250px;
+			top: 50%;
+			left: 50%;
+			margin-top: -125px;
+			margin-left: -150px;
+			text-align: center;
+		}
+		.border-top,
+		.border-right,
+		.border-bottom,
+		.border-left {
+			position: absolute;
+			background-color: #FFF;
+			opacity: 0;
+			transition: all 1s;
+		}
+		.border-top,
+		.border-bottom {
+			left: 50%;
+			right: 50%;
+			height: 4px;
+		}
+		.border-top {
+			top: 0;
+		}
+		.border-bottom{
+			bottom:0;
+		}
+		.background:hover .border-top,
+		.background:hover .border-bottom {
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+		.border-left,
+		.border-right {
+			top: 50%;
+			bottom: 50%;
+			width: 2px;
+		}
+		.border-left {
+			left: 0;
+		}
+		.border-right {
+			right: 0;
+		}
+		.background:hover .border-left,
+		.background:hover .border-right {
+			top: 0;
+			bottom: 0;
+			opacity: 1;
+		}
+		.text1,
+		.text2 {
+			height: 60px;
+			line-height: 60px;
+			font-size: 30px;
+			font-weight: 600;
+			opacity: 0;
+			transition: all .5s;
+		}
+		.text1{
+			margin-top: 80px;
+		}
+		@keyframes glittering {
+			0% {
+				background-position: 80% 0;
+			}
+			100% {
+				background-position: 0% 0;
+			}
+		}
+		@keyframes changecolor {
+			0% {
+				color: #66BD8B;
+			}
+			50% {
+				color: #3075DA;
+			}
+			100% {
+				color: #66BD8B;
+			}
+		}
+		.background:hover .text1 {
+			margin-top: 65px;
+			opacity: 1;
+		}
+		.background:hover .text2 {
+			opacity: 1;
+		}
+		.text1{
+			animation: glittering 2s linear infinite;
+			background-image: linear-gradient(to left,#D81D74 0,#7BC2D6 20%,#D81D74 40%,#7BC2D6 60%,#D81D74 80%,#7BC2D6 100%);
+			background-size: 200% 100%;
+			-webkit-background-clip: text; 
+			background-clip: text;
+			color: transparent;
+		}
+		.text2 {
+			animation: changecolor 2.5s linear infinite;
+			
+		}
