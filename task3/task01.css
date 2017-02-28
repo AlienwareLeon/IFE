@@ -1,0 +1,55 @@
+body{
+	padding: 20px;
+	font-family: "微软雅黑";
+	font-style: 10px;   /*字体大小*/
+}
+h2{
+	margin: 0px;
+}
+/*******主体部分*/
+.main{
+	margin: 0px auto; /*左右自动*/
+	padding: 20px;
+	background: #eee;
+	border:1px solid #999;
+	overflow: auto;
+	/*可以用盒模型 box-sizing: border-box; 考虑到兼容ie8以下？？？使用overflow是否确定滚动条*/
+	min-width: 700px; /*最小宽度*/
+}
+.left{
+	float: left; /*位置布局*/
+	padding: 20px;
+	width: 160px;
+	background: #fff;
+	border:1px solid #999;
+}
+.teamlogo{
+	float: left;
+
+}
+.teamname{
+	float: right;
+	text-align: center;   /*属性规定元素中的文本的水平对齐方式*/
+}
+.right{
+	width: 120px;
+	background: #fff;
+	border:1px solid #999;
+	float: right;
+	/*position:absolute;
+	top:40px;
+	right: 40px;*/
+}
+.person_logo{
+	margin: 20px;
+	background: #eee;
+	display: block; /*块级元素*/
+	border:1px solid #999;
+}
+.middle{
+	padding: 20px;
+	margin-left: 220px;
+	margin-right: 140px;  
+	background: #fff;
+	border:1px solid #999;
+}
