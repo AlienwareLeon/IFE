@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.main{
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	position: fixed;
+	top: 50%;
+	margin-top: -100px;
+	margin-left: -200px;  /*难点，这哥们是不是量的。。*/
+	left: 50%;
+}
+.box1{
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;   /*圆*/
+	position: absolute;
+}
+.box2{
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50px 0 0 0;
+	bottom: 0;
+	right: 0;
+}
